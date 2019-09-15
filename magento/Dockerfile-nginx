@@ -1,0 +1,27 @@
+FROM nginx:latest
+
+ENV WORKDIR /var/www/html
+WORKDIR ${WORKDIR}
+
+ARG A_HOST_NAME
+ARG A_PORT
+ARG A_MAGE_MODE
+ARG A_MAGE_RUN_CODE
+
+ENV HOST_NAME $A_HOST_NAME
+ENV PORT $A_PORT
+ENV MAGE_MODE $A_MAGE_MODE
+ENV MAGE_RUN_CODE $A_MAGE_RUN_CODE
+
+RUN apt-get update \
+	&& apt-get install curl sudo git -y \
+	&& rm -rf /var/log/nginx/*.log \
+	&& touch /var/log/nginx/access.log \
+	&& touch /var/log/nginx/error.log
+
+COPY ./nginx/simple.conf /etc/nginx/conf.d/default.conf
+COPY ./source_code $WORKDIR
+
+ADD ./nginx/start.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+CMD [ "/usr/local/bin/start.sh" ]

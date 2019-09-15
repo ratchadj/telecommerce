@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# check for the last tag version
+# VERSION="$(git for-each-ref --sort=taggerdate --format '%(tag)' refs/tags | tail -1)"
+VERSION=latest
+VERSION_MAGENTO=2.3.2
+
+# push the latest build to registry
+docker push ratchadj2016/telecommerce-nginx:$VERSION;
+docker push ratchadj2016/telecommerce-magento:$VERSION;
+docker push ratchadj2016/telecommerce-magento:$VERSION_MAGENTO;

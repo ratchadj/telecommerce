@@ -1,0 +1,18 @@
+version: "3"
+services:
+  magento:
+    build:
+      context: ../../magento/
+      dockerfile: Dockerfile-magento
+    image: ratchadj2016/telecommerce-magento:$MAGENTO_VERSION
+  nginx:
+    build:
+      context: ../../magento/
+      dockerfile: Dockerfile-nginx
+      args:
+        A_HOST_NAME: $APP_HOST_NAME
+        A_PORT: $APP_HOST_PORT
+        A_MAGE_MODE: $MAGE_MODE
+        A_MAGE_RUN_CODE: $MAGE_RUN_CODE
+    image: ratchadj2016/telecommerce-nginx
+

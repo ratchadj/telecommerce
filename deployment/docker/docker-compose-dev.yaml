@@ -1,0 +1,13 @@
+version: "3"
+services:
+  nginx:
+      image: ratchadj2016/telecommerce-nginx:latest
+      ports:
+          - 8080:8080
+      restart: always
+      depends_on:
+        - backend
+  backend:
+    image: ratchadj2016/telecommerce-magento:$MAGENTO_VERSION
+    volumes:
+      - ../../magento/source_code:/var/www/html

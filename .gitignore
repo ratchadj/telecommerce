@@ -1,0 +1,70 @@
+.DS_Store
+
+/deployment/docker/.env
+
+# Metadata
+/magento/source_code/.buildpath
+/magento/source_code/.cache
+/magento/source_code/.metadata
+/magento/source_code/.project
+/magento/source_code/.settings
+/magento/source_codeatlassian*
+/magento/source_code/nbproject
+/magento/source_code/sitemap
+/magento/source_code/.idea
+/magento/source_code/.gitattributes
+/magento/source_code/index.php
+/magento/source_code/.htaccess
+/magento/source_code/.htaccess.sample
+/magento/source_code/.php_cs.dist
+/magento/source_code/.travis.yml
+/magento/source_code/.user.ini
+
+# Magento specific configuration
+/magento/source_code/app/.htaccess
+/magento/source_code/app/bootstrap.php
+/magento/source_code/app/autoload.php
+/magento/source_code/app/functions.php
+/magento/source_code/app/etc
+/magento/source_code/app/code/Magento
+/magento/source_code/app/etc/vendor_path.php
+/magento/source_code/app/etc/NonComposerComponentRegistration.php
+
+# composer
+/magento/source_code/composer.lock
+
+# magento auth file
+/magento/source_code/auth.json
+/magento/source_code/auth.json.sample
+
+
+# magento github file
+/magento/source_code/.github
+
+# Files re-generated through composer
+/magento/source_code/CHANGELOG.md
+/magento/source_code/CONTRIBUTING.md
+/magento/source_code/COPYING.txt
+/magento/source_code/ISSUE_TEMPLATE.md
+/magento/source_code/LICENSE_AFL.txt
+/magento/source_code/LICENSE.txt
+/magento/source_code/Gruntfile.js.sample
+/magento/source_code/grunt-config.json.sample
+/magento/source_code/nginx.conf.sample
+/magento/source_code/package.json.sample
+/magento/source_code/php.ini.sample
+/magento/source_code/vendor
+/magento/source_code/generated
+/magento/source_code/update
+/magento/source_code/phpserver
+/magento/source_code/bin
+/magento/source_code/dev
+/magento/source_code/lib
+/magento/source_code/pub
+/magento/source_code/setup
+/magento/source_code/var
+
+# Excludes (or a better alternative might be to symlink this to shared folders
+!/magento/source_code/pub/media/catalog
+!/magento/source_code/pub/media/downloadable
+!/magento/source_code/var/composer_home
