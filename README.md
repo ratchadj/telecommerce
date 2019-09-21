@@ -21,18 +21,20 @@ Programming language: PHP 7, including the required extensions
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to install the software
 
 ```
-1. register aws consule account
+1. register aws console account
 2. install aws cli
-3. run aws configure for storing access key and secret access key *** cat ~/.aws/credentials for checking your key
-4. go to aws console and create secret key on AWS and put it on telecommerce/deployment/aws
+3. run aws configure on your terminal for storing access key and secret access key
+cat ~/.aws/credentials for checking your key
+4. go to aws console and create secret key on AWS and locate it on telecommerce/deployment/aws
+please using key file name as "telecommerce"
 ```
 
 ### Deployment
 
-A step by step series of examples that tell you how to get a development env running
+A step by step how to get a development env running
 
 
 ```
